@@ -1,0 +1,11 @@
+FoldX 5.1 (2011)
+by the FoldX Consortium 
+Jesper Borg, Frederic Rousseau, Joost Schymkowitz,
+Luis Serrano and Francois Stricher
+------------------------------------------------------
+
+PDB file analysed: batch
+Output type: AnalyseComplex
+List of Residues at the interface: ./aav10_rec_moe_Repair.pdb
+interface residues between c and R
+Sc262	Nc263	Tc265	Sc266	Sc269	Tc270	Nc271	Dc272	Tc274	Fc276	Nc385	Sc387	Qc388	Qc489	Nc499	Nc500	Sc501	Nc502	Ac504	Wc505	Tc506	Kc510	Nc514	Rc516	Dc517	Sc518	RR403	KR404	NR405	RR406	PR407	PR408	IR409	SR413	PR414	QR417	ER418	IR419	TR423	TR426	VR427	IR428	DR429	SR431	QR432	SR433	TR434	DR435	DR436	DR437	KR438	IR439	YR442	TR460	AR461	IR462	LR477	VR479	DR481	
