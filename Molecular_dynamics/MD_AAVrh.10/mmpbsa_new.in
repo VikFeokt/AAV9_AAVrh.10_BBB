@@ -1,0 +1,13 @@
+&general
+   startframe=401,
+   endframe=1000,
+   interval=1,
+   verbose=1,
+/
+&gb
+   igb=2,
+   saltcon=0.100,
+/
+&pb
+   istrng=0.100,
+/
