@@ -1,0 +1,27 @@
+parm com9_solvated.prmtop
+trajin prod3_300ns.nc
+unwrap
+rms fit :1-613
+
+#average coordinates for N, C, CA atoms of protein
+average @N,C,CA crdset trajaverage
+createcrd trajectory
+run
+
+#creating covariance matrix and projecting
+crdaction trajectory rms ref trajaverage @N,C,CA
+crdaction trajectory matrix covar name covmatrix @N,C,CA
+runanalysis diagmatrix covmatrix out evecs.dat vecs 10 name eigenvectors \
+nmwiz nmwizvecs 10 nmwizfile normalmodes.nmd nmwizmask @N,C,CA
+
+crdaction trajectory projection modes eigenvectors beg 1 end 10 @N,C,CA out \
+pca.dat crdframes 1,1000
+
+quit
+
+clear all
+readdata evecs.dat name eigenvectors
+parm unboundstrip.top
+parmwrite out modes.prmtop
+runanalysis modes name eigenvectors trajout modes01.nc pcmin -150 pcmax 150 \
+tmode 1 trajoutmask @N,C,CA trajoutfmt netcdf
