@@ -1,5 +1,5 @@
 parm com9_solvated.prmtop
-trajin prod3_300ns.nc
+trajin prod2_300ns.nc
 unwrap
 rms fit :1-613
 
